@@ -94,4 +94,18 @@ class Provider extends AbstractProvider implements ProviderInterface
             'grant_type' => 'authorization_code',
         ]);
     }
+    
+    /**
+     * Set the user fields to request from Odnoklassniki.
+     *
+     * @param array $fields
+     *
+     * @return $this
+     */
+    public function fields(array $fields)
+    {
+        $this->fields = $fields;
+
+        return $this;
+    }
 }
