@@ -19,6 +19,13 @@ class Provider extends AbstractProvider implements ProviderInterface
     protected $scopes = ['GET_EMAIL'];
 
     /**
+     * The user fields being requested.
+     *
+     * @var array
+     */
+    protected $fields = ['uid', 'name', 'first_name', 'last_name', 'birthday', 'pic190x190', 'has_email', 'email'];
+    
+    /**
      * {@inheritdoc}
      */
     protected function getAuthUrl($state)
@@ -45,7 +52,7 @@ class Provider extends AbstractProvider implements ProviderInterface
             'format'          => 'json',
             'method'          => 'users.getCurrentUser',
             'application_key' => env('ODNOKLASSNIKI_PUBLIC'),
-            'fields'          => 'uid,name,first_name,last_name,birthday,pic190x190,has_email,email'
+            'fields'          => implode(',', $this->fields)
         ];
 
         ksort($params, SORT_STRING);
@@ -71,7 +78,7 @@ class Provider extends AbstractProvider implements ProviderInterface
     {
         return (new User())->setRaw($user)->map([
             'id'       => $user['uid'],
-            'name'     => $user['name'],
+            'name'     => isset($user['name']) ? $user['name'] : null,
             'nickname' => null,
             'email'    => array_get($user, 'email'),
             'avatar'   => array_get($user, 'pic190x190'),
