@@ -2,7 +2,7 @@
 
 ### 1. Installation
 
-`composer require jhaoda/socialite-odnoklassniki`
+`composer require siegessa/socialite-odnoklassniki`
 
 ### 2. Service Provider
 
@@ -25,7 +25,7 @@ For example:
 
 * Add your listeners (i.e. the ones from the providers) to the `SocialiteProviders\Manager\SocialiteWasCalled[]` that you just created.
 
-* The listener that you add for this provider is `JhaoDa\SocialiteProviders\Odnoklassniki\OdnoklassnikiExtendSocialite::class`.
+* The listener that you add for this provider is `Cngz\SocialiteProviders\Odnoklassniki\OdnoklassnikiExtendSocialite::class`.
 
 * Note: You do not need to add anything for the built-in socialite providers unless you override them with your own providers.
 
@@ -37,8 +37,8 @@ For example:
  * @var array
  */
 protected $listen = [
-    SocialiteProviders\Manager\SocialiteWasCalled::class => [
-        JhaoDa\SocialiteProviders\Odnoklassniki\OdnoklassnikiExtendSocialite::class
+    \SocialiteProviders\Manager\SocialiteWasCalled::class => [
+        \Cngz\SocialiteProviders\Odnoklassniki\OdnoklassnikiExtendSocialite::class
     ],
 ];
 ```
