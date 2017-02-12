@@ -1,6 +1,6 @@
 <?php
 
-namespace JhaoDa\SocialiteProviders\Odnoklassniki;
+namespace Cngz\SocialiteProviders\Odnoklassniki;
 
 use Laravel\Socialite\Two\ProviderInterface;
 use SocialiteProviders\Manager\OAuth2\User;
