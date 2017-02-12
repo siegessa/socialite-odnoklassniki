@@ -1,5 +1,5 @@
 <?php
-namespace JhaoDa\SocialiteProviders\Odnoklassniki;
+namespace Cngz\SocialiteProviders\Odnoklassniki;
 
 use SocialiteProviders\Manager\SocialiteWasCalled;
 
