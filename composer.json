@@ -3,8 +3,8 @@
     "description": "Odnoklassniki OAuth2 Provider for Laravel Socialite",
     "license": "MIT",
     "authors": [{
-        "name": "JhaoDa",
-        "email": "jhaoda@gmail.com"
+        "name": "Cngz",
+        "email": "nurchin@gmail.com"
     }],
     "require": {
         "php": "^5.6 || ^7.0",
@@ -12,7 +12,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JhaoDa\\SocialiteProviders\\Odnoklassniki\\": "src/"
+            "Cngz\\SocialiteProviders\\Odnoklassniki\\": "src/"
         }
     }
 }
